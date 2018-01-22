@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:foo="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.template_d.app.MainActivity">
+
+    <!-- custom toolbar -->
+    <include
+        android:id="@+id/main_toolbar"
+        layout="@layout/main_toolbar" />
+
+    <!-- header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
+
+        <!-- viewpager -->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- viewpager indicator -->
+        <LinearLayout
+            android:id="@+id/main_viewpager_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="4dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal" />
+
+    </RelativeLayout>
+
+    <!-- body -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <!-- content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <!-- pesawat -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_white"
+                android:gravity="center_vertical"
+                android:onClick="PesawatBtn"
+                android:orientation="horizontal">
+
+                <!-- icon -->
+                <ImageButton
+                    android:id="@+id/btn_pesawat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/pesawat"
+                    android:contentDescription="@string/desc_pesawat"
+                    android:onClick="PesawatBtn"
+                    android:src="@drawable/main_pesawat"
+                    android:tint="@android:color/white" />
+
+                <!-- text -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:onClick="PesawatBtn"
+                    android:orientation="vertical">
+
+                    <com.template_d.app.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:onClick="PesawatBtn"
+                        android:text="@string/text_pesawat"
+                        android:textSize="32sp"
+                        foo:customFont="BebasNeue.otf" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:alpha="0.8"
+                        android:textSize="12sp"
+                        android:onClick="PesawatBtn"
+                        android:text="@string/subtext_pesawat" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- kereta -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_white"
+                android:gravity="center_vertical"
+                android:onClick="KeretaBtn"
+                android:orientation="horizontal">
+
+                <!-- icon -->
+                <ImageButton
+                    android:id="@+id/btn_kereta"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/kereta"
+                    android:contentDescription="@string/desc_kereta"
+                    android:onClick="KeretaBtn"
+                    android:src="@drawable/main_kereta"
+                    android:tint="@android:color/white" />
+
+                <!-- text -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="4"
+                    android:onClick="KeretaBtn"
+                    android:orientation="vertical">
+
+                    <com.template_d.app.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:onClick="KeretaBtn"
+                        android:text="@string/text_kereta"
+                        android:textSize="32sp"
+                        foo:customFont="BebasNeue.otf" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:alpha="0.8"
+                        android:textSize="12sp"
+                        android:onClick="KeretaBtn"
+                        android:text="@string/subtext_kereta" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- hotel -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_white"
+                android:gravity="center_vertical"
+                android:onClick="HotelBtn"
+                android:orientation="horizontal">
+
+                <!-- icon -->
+                <ImageButton
+                    android:id="@+id/btn_hotel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/hotel"
+                    android:contentDescription="@string/desc_hotel"
+                    android:onClick="HotelBtn"
+                    android:src="@drawable/main_hotel"
+                    android:tint="@android:color/white" />
+
+                <!-- text -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="4"
+                    android:onClick="HotelBtn"
+                    android:orientation="vertical">
+
+                    <com.template_d.app.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:onClick="HotelBtn"
+                        android:text="@string/text_hotel"
+                        android:textSize="32sp"
+                        foo:customFont="BebasNeue.otf" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        android:alpha="0.8"
+                        android:onClick="HotelBtn"
+                        android:text="@string/subtext_hotel" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- umroh -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_white"
+                android:gravity="center_vertical"
+                android:onClick="UmrohBtn"
+                android:orientation="horizontal">
+
+                <!-- icon -->
+                <ImageButton
+                    android:id="@+id/btn_umroh"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/umroh"
+                    android:contentDescription="@string/desc_umroh"
+                    android:onClick="UmrohBtn"
+                    android:src="@drawable/main_umroh"
+                    android:tint="@android:color/white" />
+
+                <!-- text -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="4"
+                    android:onClick="UmrohBtn"
+                    android:orientation="vertical">
+
+                    <com.template_d.app.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:onClick="UmrohBtn"
+                        android:text="@string/text_umroh"
+                        android:textSize="32sp"
+                        foo:customFont="BebasNeue.otf" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        android:alpha="0.8"
+                        android:onClick="UmrohBtn"
+                        android:text="@string/subtext_umroh" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- bus -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_white"
+                android:gravity="center_vertical"
+                android:onClick="BusBtn"
+                android:orientation="horizontal">
+
+                <!-- icon -->
+                <ImageButton
+                    android:id="@+id/btn_bus"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bus"
+                    android:contentDescription="@string/desc_bus"
+                    android:onClick="BusBtn"
+                    android:src="@drawable/main_bus"
+                    android:tint="@android:color/white" />
+
+                <!-- text -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="4"
+                    android:onClick="BusBtn"
+                    android:orientation="vertical">
+
+                    <com.template_d.app.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:onClick="BusBtn"
+                        android:text="@string/text_bus"
+                        android:textSize="32sp"
+                        foo:customFont="BebasNeue.otf" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:alpha="0.8"
+                        android:textSize="12sp"
+                        android:onClick="BusBtn"
+                        android:text="@string/subtext_bus" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- travel -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_white"
+                android:gravity="center_vertical"
+                android:onClick="TravelBtn"
+                android:orientation="horizontal">
+
+                <!-- icon -->
+                <ImageButton
+                    android:id="@+id/btn_travel"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/travel"
+                    android:contentDescription="@string/desc_travel"
+                    android:onClick="TravelBtn"
+                    android:src="@drawable/main_travel"
+                    android:tint="@android:color/white" />
+
+                <!-- text -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="4"
+                    android:onClick="TravelBtn"
+                    android:orientation="vertical">
+
+                    <com.template_d.app.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:onClick="TravelBtn"
+                        android:text="@string/text_travel"
+                        android:textSize="32sp"
+                        foo:customFont="BebasNeue.otf" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:alpha="0.8"
+                        android:textSize="12sp"
+                        android:onClick="TravelBtn"
+                        android:text="@string/subtext_travel" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ppob -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_white"
+                android:gravity="center_vertical"
+                android:onClick="PPOBBtn"
+                android:orientation="horizontal">
+
+                <!-- icon -->
+                <ImageButton
+                    android:id="@+id/btn_ppob"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/ppob"
+                    android:contentDescription="@string/desc_ppob"
+                    android:onClick="PPOBBtn"
+                    android:src="@drawable/main_ppob"
+                    android:tint="@android:color/white" />
+
+                <!-- text -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="4"
+                    android:onClick="PPOBBtn"
+                    android:orientation="vertical">
+
+                    <com.template_d.app.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:onClick="PPOBBtn"
+                        android:text="@string/text_ppob"
+                        android:textSize="32sp"
+                        foo:customFont="BebasNeue.otf" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:textSize="12sp"
+                        android:alpha="0.8"
+                        android:onClick="PPOBBtn"
+                        android:text="@string/subtext_ppob" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- pulsa -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_white"
+                android:gravity="center_vertical"
+                android:onClick="PulsaBtn"
+                android:orientation="horizontal">
+
+                <!-- icon -->
+                <ImageButton
+                    android:id="@+id/btn_pulsa"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/pulsa"
+                    android:contentDescription="@string/desc_pulsa"
+                    android:onClick="PulsaBtn"
+                    android:src="@drawable/main_pulsa"
+                    android:tint="@android:color/white" />
+
+                <!-- text -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="4"
+                    android:onClick="PulsaBtn"
+                    android:orientation="vertical">
+
+                    <com.template_d.app.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:onClick="PulsaBtn"
+                        android:text="@string/text_pulsa"
+                        android:textSize="32sp"
+                        foo:customFont="BebasNeue.otf" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:alpha="0.8"
+                        android:textSize="12sp"
+                        android:onClick="PulsaBtn"
+                        android:text="@string/subtext_pulsa" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- tur -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_white"
+                android:gravity="center_vertical"
+                android:onClick="TurBtn"
+                android:orientation="horizontal">
+
+                <!-- icon -->
+                <ImageButton
+                    android:id="@+id/btn_agen"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/agen"
+                    android:contentDescription="@string/desc_agen"
+                    android:onClick="AgenBtn"
+                    android:src="@drawable/main_agen"
+                    android:tint="@android:color/white" />
+
+                <!-- text -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="4"
+                    android:onClick="AgenBtn"
+                    android:orientation="vertical">
+
+                    <com.template_d.app.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:onClick="AgenBtn"
+                        android:text="@string/text_agen"
+                        android:textSize="32sp"
+                        foo:customFont="BebasNeue.otf" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:alpha="0.8"
+                        android:textSize="12sp"
+                        android:onClick="AgenBtn"
+                        android:text="@string/subtext_agen" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- agen -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_white"
+                android:gravity="center_vertical"
+                android:onClick="AgenBtn"
+                android:orientation="horizontal">
+
+                <!-- icon -->
+                <ImageButton
+                    android:id="@+id/btn_tur"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/tur"
+                    android:contentDescription="@string/desc_tur"
+                    android:onClick="TurBtn"
+                    android:src="@drawable/main_tur"
+                    android:tint="@android:color/white" />
+
+                <!-- text -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="4"
+                    android:onClick="TurBtn"
+                    android:orientation="vertical">
+
+                    <com.template_d.app.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:onClick="TurBtn"
+                        android:text="@string/text_tur"
+                        android:textSize="32sp"
+                        foo:customFont="BebasNeue.otf" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:alpha="0.8"
+                        android:textSize="12sp"
+                        android:onClick="TurBtn"
+                        android:text="@string/subtext_tur" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- kontak -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/bg_white"
+                android:gravity="center_vertical"
+                android:onClick="KontakBtn"
+                android:orientation="horizontal">
+
+                <!-- icon -->
+                <ImageButton
+                    android:id="@+id/btn_kontak"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/kontak"
+                    android:contentDescription="@string/desc_kontak"
+                    android:onClick="KontakBtn"
+                    android:src="@drawable/main_kontak"
+                    android:tint="@android:color/white" />
+
+                <!-- text -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="4"
+                    android:onClick="KontakBtn"
+                    android:orientation="vertical">
+
+                    <com.template_d.app.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:onClick="KontakBtn"
+                        android:text="@string/text_kontak"
+                        android:textSize="32sp"
+                        foo:customFont="BebasNeue.otf" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:alpha="0.8"
+                        android:textSize="12sp"
+                        android:onClick="KontakBtn"
+                        android:text="@string/subtext_kontak" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- keluar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="@drawable/bg_white"
+                android:gravity="center_vertical"
+                android:onClick="KeluarBtn"
+                android:orientation="horizontal">
+
+                <!-- icon -->
+                <ImageButton
+                    android:id="@+id/btn_keluar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/keluar"
+                    android:contentDescription="@string/desc_keluar"
+                    android:onClick="KeluarBtn"
+                    android:src="@drawable/main_keluar"
+                    android:tint="@android:color/white" />
+
+                <!-- text -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_weight="4"
+                    android:onClick="KeluarBtn"
+                    android:orientation="vertical">
+
+                    <com.template_d.app.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:onClick="KeluarBtn"
+                        android:text="@string/text_login"
+                        android:textSize="32sp"
+                        foo:customFont="BebasNeue.otf" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:alpha="0.8"
+                        android:textSize="12sp"
+                        android:onClick="KeluarBtn"
+                        android:text="@string/subtext_keluar" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
